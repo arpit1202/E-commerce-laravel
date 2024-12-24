@@ -20,10 +20,13 @@
                 <div class="col-md-3">
                     <div class="product-single">
                         <div class="product-img">
-                            <img src="img/product-1.png" alt="Product Image">
+                            <img src="{{asset('img/' .$product->image)}}" alt="Product Image">
                         </div>
                         <div class="product-content">
-                            <h2>{{$product->name}}</h2>
+                            <h2>
+                                <a href="{{ route('single_product' , $product->id) }}">{{$product->name}}
+                                </a>
+                                </h2>
                             <h3>{{$product->price}}</h3>
                             <a class="btn" href="#">Buy Now</a>
                         </div>
